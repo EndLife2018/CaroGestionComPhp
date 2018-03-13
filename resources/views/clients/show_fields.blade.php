@@ -1,150 +1,112 @@
-<!-- Idclient Field -->
-<div class="form-group">
-    {!! Form::label('idclient', 'Idclient:') !!}
-    <p>{!! $client->idclient !!}</p>
-</div>
-
-<!-- Iduser Field -->
-<div class="form-group">
-    {!! Form::label('iduser', 'Iduser:') !!}
-    <p>{!! $client->iduser !!}</p>
-</div>
 
 <!-- Raison Social Field -->
 <div class="form-group">
-    {!! Form::label('raison_social', 'Raison Social:') !!}
-    <p>{!! $client->raison_social !!}</p>
+    {!! Form::label('raison_social', 'Raison sociale : ') !!} {!! $client->raison_social !!}
 </div>
 
 <!-- Num Siret Field -->
 <div class="form-group">
-    {!! Form::label('num_siret', 'Num Siret:') !!}
-    <p>{!! $client->num_siret !!}</p>
+    {!! Form::label('num_siret', 'Num SIRET : ') !!} {!! $client->num_siret !!}
 </div>
 
 <!-- Num Tva Field -->
 <div class="form-group">
-    {!! Form::label('num_tva', 'Num Tva:') !!}
-    <p>{!! $client->num_tva !!}</p>
+    {!! Form::label('num_tva', 'Num TVA : ') !!} {!! $client->num_tva !!}
 </div>
 
-<!-- Civilite Field -->
-<div class="form-group">
-    {!! Form::label('civilite', 'Civilite:') !!}
-    <p>{!! $client->civilite !!}</p>
-</div>
 
 <!-- Nom Field -->
 <div class="form-group">
-    {!! Form::label('nom', 'Nom:') !!}
-    <p>{!! $client->nom !!}</p>
+    {!! Form::label('nom', 'Nom : ') !!} {!! $client->nom !!}
 </div>
 
 <!-- Prenom Field -->
 <div class="form-group">
-    {!! Form::label('prenom', 'Prenom:') !!}
-    <p>{!! $client->prenom !!}</p>
+    {!! Form::label('prenom', 'Prénom : ') !!} {!! $client->prenom !!}
 </div>
 
 <!-- Adresse1 Field -->
 <div class="form-group">
-    {!! Form::label('adresse1', 'Adresse1:') !!}
-    <p>{!! $client->adresse1 !!}</p>
+    {!! Form::label('adresse1', 'Adresse 1 : ') !!} {!! $client->adresse1 !!}
 </div>
 
 <!-- Adresse2 Field -->
 <div class="form-group">
-    {!! Form::label('adresse2', 'Adresse2:') !!}
-    <p>{!! $client->adresse2 !!}</p>
+    {!! Form::label('adresse2', 'Adresse 2 : ') !!} {!! $client->adresse2 !!}
 </div>
 
 <!-- Cp Field -->
 <div class="form-group">
-    {!! Form::label('cp', 'Cp:') !!}
-    <p>{!! $client->cp !!}</p>
+    {!! Form::label('cp', 'Code postal : ') !!} {!! $client->cp !!}
 </div>
 
 <!-- Ville Field -->
 <div class="form-group">
-    {!! Form::label('ville', 'Ville:') !!}
-    <p>{!! $client->ville !!}</p>
+    {!! Form::label('ville', 'Ville : ') !!} {!! $client->ville !!}
 </div>
 
 <!-- Tel Field -->
 <div class="form-group">
-    {!! Form::label('tel', 'Tel:') !!}
-    <p>{!! $client->tel !!}</p>
+    {!! Form::label('tel', 'Téléphone : ') !!} {!! $client->tel !!}
 </div>
 
 <!-- Fax Field -->
 <div class="form-group">
-    {!! Form::label('fax', 'Fax:') !!}
-    <p>{!! $client->fax !!}</p>
+    {!! Form::label('fax', 'Fax : ') !!} {!! $client->fax !!}
 </div>
 
 <!-- Port Field -->
 <div class="form-group">
-    {!! Form::label('port', 'Port:') !!}
-    <p>{!! $client->port !!}</p>
+    {!! Form::label('port', 'Portable : ') !!} {!! $client->port !!}
 </div>
 
 <!-- Mail Field -->
 <div class="form-group">
-    {!! Form::label('mail', 'Mail:') !!}
-    <p>{!! $client->mail !!}</p>
+    {!! Form::label('mail', 'Mail : ') !!} {!! $client->mail !!}
 </div>
 
 <!-- Mode Paiement Default Field -->
 <div class="form-group">
-    {!! Form::label('mode_paiement_default', 'Mode Paiement Default:') !!}
-    <p>{!! $client->mode_paiement_default !!}</p>
+    {!! Form::label('mode_paiement_default', 'Mode paiement par défault : ') !!} {!! $client->mode_paiement_default !!}
 </div>
 
 <!-- Code Banque Field -->
 <div class="form-group">
-    {!! Form::label('code_banque', 'Code Banque:') !!}
-    <p>{!! $client->code_banque !!}</p>
+    {!! Form::label('code_banque', 'Code Banque : ') !!} {!! $client->code_banque !!}
 </div>
 
 <!-- Code Guichet Field -->
 <div class="form-group">
-    {!! Form::label('code_guichet', 'Code Guichet:') !!}
-    <p>{!! $client->code_guichet !!}</p>
+    {!! Form::label('code_guichet', 'Code Guichet : ') !!} {!! $client->code_guichet !!}
 </div>
 
 <!-- Code Cpt Field -->
 <div class="form-group">
-    {!! Form::label('code_cpt', 'Code Cpt:') !!}
-    <p>{!! $client->code_cpt !!}</p>
+    {!! Form::label('code_cpt', 'Code Compte : ') !!} {!! $client->code_cpt !!}
 </div>
 
 <!-- Cle Rib Field -->
 <div class="form-group">
-    {!! Form::label('cle_rib', 'Cle Rib:') !!}
-    <p>{!! $client->cle_rib !!}</p>
+    {!! Form::label('cle_rib', 'Clé RIB : ') !!} {!! $client->cle_rib !!}
 </div>
 
 <!-- Iban Field -->
 <div class="form-group">
-    {!! Form::label('iban', 'Iban:') !!}
-    <p>{!! $client->iban !!}</p>
+    {!! Form::label('iban', 'IBAN : ') !!} {!! $client->iban !!}
 </div>
 
 <!-- Bic Field -->
 <div class="form-group">
-    {!! Form::label('bic', 'Bic:') !!}
-    <p>{!! $client->bic !!}</p>
+    {!! Form::label('bic', 'BIC : ') !!} {!! $client->bic !!}
 </div>
 
 <!-- Encour Field -->
 <div class="form-group">
-    {!! Form::label('encour', 'Encour:') !!}
-    <p>{!! $client->encour !!}</p>
+    {!! Form::label('encour', 'Encours : ') !!} {!! $client->encour !!}
 </div>
 
 <!-- Mail Paypal Field -->
 <div class="form-group">
-    {!! Form::label('mail_paypal', 'Mail Paypal:') !!}
-    <p>{!! $client->mail_paypal !!}</p>
+    {!! Form::label('mail_paypal', 'Mail Paypal : ') !!} {!! $client->mail_paypal !!}
 </div>
 

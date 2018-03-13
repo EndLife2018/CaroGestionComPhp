@@ -14,7 +14,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string raison_social
  * @property string num_siret
  * @property string num_tva
- * @property integer civilite
  * @property string nom
  * @property string prenom
  * @property string adresse1
@@ -49,11 +48,9 @@ class Client extends Model
 
 
     public $fillable = [
-        'iduser',
         'raison_social',
         'num_siret',
         'num_tva',
-        'civilite',
         'nom',
         'prenom',
         'adresse1',
@@ -86,7 +83,6 @@ class Client extends Model
         'raison_social' => 'string',
         'num_siret' => 'string',
         'num_tva' => 'string',
-        'civilite' => 'integer',
         'nom' => 'string',
         'prenom' => 'string',
         'adresse1' => 'string',

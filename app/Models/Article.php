@@ -46,28 +46,17 @@ class Article extends Model
 
 
     public $fillable = [
-        'idfamillearticle',
-        'idsousfamillearticle',
         'idfournisseur',
-        'ref_fournisseur',
         'ref_interne',
-        'desc_court',
         'desc_long',
-        'date_debut',
-        'date_fin',
         'num_serie',
         'poids',
         'duree_garantie',
         'stock_minima',
-        'stock_reel',
         'code_barre',
-        'prix_achat_ht',
         'prix_vente_ht',
-        'prix_vente_ttc',
-        'images',
-        'images2',
-        'images3'
-    ];
+        'prix_vente_ttc'
+        ];
 
     /**
      * The attributes that should be casted to native types.
@@ -75,28 +64,20 @@ class Article extends Model
      * @var array
      */
     protected $casts = [
-        'idarticle' => 'integer',
-        'idfamillearticle' => 'integer',
-        'idsousfamillearticle' => 'integer',
-        'idfournisseur' => 'integer',
-        'ref_fournisseur' => 'string',
+        // 'idarticle' => 'integer',
+        // 'idfamillearticle' => 'integer',
+        // 'idsousfamillearticle' => 'integer',
+         'idfournisseur' => 'integer',
+        // 'ref_fournisseur' => 'string',
         'ref_interne' => 'string',
-        'desc_court' => 'string',
         'desc_long' => 'string',
-        'date_debut' => 'string',
-        'date_fin' => 'string',
         'num_serie' => 'string',
         'poids' => 'string',
         'duree_garantie' => 'string',
         'stock_minima' => 'string',
-        'stock_reel' => 'string',
         'code_barre' => 'string',
-        'prix_achat_ht' => 'string',
         'prix_vente_ht' => 'string',
-        'prix_vente_ttc' => 'string',
-        'images' => 'string',
-        'images2' => 'string',
-        'images3' => 'string'
+        'prix_vente_ttc' => 'string'
     ];
 
     /**

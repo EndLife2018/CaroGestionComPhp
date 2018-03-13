@@ -1,73 +1,51 @@
-<!-- Iduser Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('iduser', 'Iduser:') !!}
-    {!! Form::number('iduser', null, ['class' => 'form-control']) !!}
-</div>
-
 <!-- Raison Social Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('raison_social', 'Raison Social:') !!}
-    {!! Form::text('raison_social', null, ['class' => 'form-control']) !!}
+    {!! Form::label('raison_social', 'Raison social :') !!} {!! Form::text('raison_social', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Num Siret Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('num_siret', 'Num Siret:') !!}
-    {!! Form::text('num_siret', null, ['class' => 'form-control']) !!}
+    {!! Form::label('num_siret', 'Numéro Siret : ') !!} {!! Form::text('num_siret', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Num Tva Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('num_tva', 'Num Tva:') !!}
-    {!! Form::text('num_tva', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Civilite Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('civilite', 'Civilite:') !!}
-    {!! Form::number('civilite', null, ['class' => 'form-control']) !!}
+    {!! Form::label('num_tva', 'Num Tva : ') !!} {!! Form::text('num_tva', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Nom Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('nom', 'Nom:') !!}
-    {!! Form::text('nom', null, ['class' => 'form-control']) !!}
+    {!! Form::label('nom', 'Nom : ') !!} {!! Form::text('nom', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Prenom Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('prenom', 'Prenom:') !!}
-    {!! Form::text('prenom', null, ['class' => 'form-control']) !!}
+    {!! Form::label('prenom', 'Prénom : ') !!} {!! Form::text('prenom', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Adresse1 Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('adresse1', 'Adresse1:') !!}
-    {!! Form::text('adresse1', null, ['class' => 'form-control']) !!}
+    {!! Form::label('adresse1', 'Adresse 1 :') !!} {!! Form::text('adresse1', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Adresse2 Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('adresse2', 'Adresse2:') !!}
-    {!! Form::text('adresse2', null, ['class' => 'form-control']) !!}
+    {!! Form::label('adresse2', 'Adresse 2 : ') !!} {!! Form::text('adresse2', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Cp Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('cp', 'Cp:') !!}
-    {!! Form::number('cp', null, ['class' => 'form-control']) !!}
+    {!! Form::label('cp', 'Code postal :') !!} {!! Form::number('cp', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Ville Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('ville', 'Ville:') !!}
-    {!! Form::text('ville', null, ['class' => 'form-control']) !!}
+    {!! Form::label('ville', 'Ville : ') !!} {!! Form::text('ville', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Tel Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('tel', 'Tel:') !!}
-    {!! Form::text('tel', null, ['class' => 'form-control']) !!}
+    {!! Form::label('tel', 'Tel :') !!} {!! Form::text('tel', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Fax Field -->
@@ -144,6 +122,6 @@
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('clients.index') !!}" class="btn btn-default">Cancel</a>
+    {!! Form::submit('Enregistrer', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('clients.index') !!}" class="btn btn-default">Annuler</a>
 </div>
