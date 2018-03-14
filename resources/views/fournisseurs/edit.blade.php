@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
     <section class="content-header">
         <h1>
-            Commande Client
+            Fournisseur
         </h1>
    </section>
    <div class="content">
@@ -12,9 +11,9 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($commandeClient, ['route' => ['commandeClients.update', $commandeClient->id], 'method' => 'patch']) !!}
+                   {!! Form::model($fournisseur, ['route' => ['fournisseurs.update', $fournisseur->id], 'method' => 'patch']) !!}
 
-                        @include('commande_clients.fields')
+                        @include('fournisseurs.fields')
 
                    {!! Form::close() !!}
                </div>

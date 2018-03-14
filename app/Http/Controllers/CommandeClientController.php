@@ -18,6 +18,7 @@ class CommandeClientController extends AppBaseController
 
     public function __construct(CommandeClientRepository $commandeClientRepo)
     {
+        $this->middleware('auth');
         $this->commandeClientRepository = $commandeClientRepo;
     }
 
@@ -56,7 +57,6 @@ class CommandeClientController extends AppBaseController
     public function store(CreateCommandeClientRequest $request)
     {
         $input = $request->all();
-
         $commandeClient = $this->commandeClientRepository->create($input);
 
         Flash::success('Commande Client saved successfully.');

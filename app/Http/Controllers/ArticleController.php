@@ -21,6 +21,7 @@ class ArticleController extends AppBaseController
 
     public function __construct(ArticleRepository $articleRepo)
     {
+        $this->middleware('auth');
         $this->articleRepository = $articleRepo;
     }
 

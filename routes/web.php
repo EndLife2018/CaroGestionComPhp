@@ -53,3 +53,5 @@ Route::resource('articles', 'ArticleController');
 Route::resource('commandeClients', 'CommandeClientController');
 
 Route::resource('commandeFournisseurs', 'CommandeFournisseurController');
+
+Route::resource('fournisseurs', 'FournisseurController');

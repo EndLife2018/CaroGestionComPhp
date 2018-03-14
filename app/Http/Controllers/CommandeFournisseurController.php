@@ -18,6 +18,7 @@ class CommandeFournisseurController extends AppBaseController
 
     public function __construct(CommandeFournisseurRepository $commandeFournisseurRepo)
     {
+        $this->middleware('auth');
         $this->commandeFournisseurRepository = $commandeFournisseurRepo;
     }
 

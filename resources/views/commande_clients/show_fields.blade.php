@@ -1,192 +1,139 @@
 <!-- Idcmdcli Field -->
 <div class="form-group">
-    {!! Form::label('idcmdcli', 'Idcmdcli:') !!}
-    <p>{!! $commandeClient->idcmdcli !!}</p>
+    {!! Form::label('idcmdcli', 'N° Commande : ') !!} {!! $commandeClient->id !!}
 </div>
 
 <!-- Idclient Field -->
 <div class="form-group">
-    {!! Form::label('idclient', 'Idclient:') !!}
-    <p>{!! $commandeClient->idclient !!}</p>
+    {!! Form::label('idclient', 'Client :') !!} {!! App\Models\Client::findOrFail($commandeClient->idclient)->raison_social !!}
 </div>
 
 <!-- Date Field -->
 <div class="form-group">
-    {!! Form::label('date', 'Date:') !!}
-    <p>{!! $commandeClient->date !!}</p>
+    {!! Form::label('date', 'Date : ') !!} {!! $commandeClient->date !!}
 </div>
 
 <!-- Etat Cmd Cli Field -->
 <div class="form-group">
-    {!! Form::label('etat_cmd_cli', 'Etat Cmd Cli:') !!}
-    <p>{!! $commandeClient->etat_cmd_cli !!}</p>
+    {!! Form::label('etat_cmd_cli', 'Etat commande : ') !!} {!! $commandeClient->etat_cmd_cli !!}
 </div>
 
 <!-- Date Liv Cmd Cli Field -->
 <div class="form-group">
-    {!! Form::label('date_liv_cmd_cli', 'Date Liv Cmd Cli:') !!}
-    <p>{!! $commandeClient->date_liv_cmd_cli !!}</p>
+    {!! Form::label('date_liv_cmd_cli', 'Date Liv Cmd Cli:') !!} {!! $commandeClient->date_liv_cmd_cli !!}
 </div>
+<?php if(!$commandeClient->art1 == null || !$commandeClient->art2 == null || !$commandeClient->art3 == null || !$commandeClient->art4 == null || !$commandeClient->art5 == null || !$commandeClient->art6 == null || !$commandeClient->art7 == null || !$commandeClient->art8 == null || !$commandeClient->art9 == null ||!$commandeClient->art10 == null || !$commandeClient->art11 == null || !$commandeClient->art12 == null) 
+   { ?>
+<table class="table table-responsive">
+    <tr>
+        <th> Article </th>
+        <th> Quantité </th>
+    </tr>
+<?php }
+ if(!$commandeClient->art1 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art1)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte1 !!}</td>
+    </tr>
+<?php } 
+if(!$commandeClient->art2 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art2)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte2 !!}</td>
+    </tr>
+<?php } 
+if(!$commandeClient->art3 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art3)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte3 !!}</td>
+    </tr>
+<?php } 
+if(!$commandeClient->art4 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art4)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte4 !!}</td>
+    </tr>
+<?php }
+if(!$commandeClient->art5 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art5)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte5 !!}</td>
+    </tr>
+<?php } 
+if(!$commandeClient->art6 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art6)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte6 !!}</td>
+    </tr>
+<?php } ?>
 
-<!-- Art1 Field -->
-<div class="form-group">
-    {!! Form::label('art1', 'Art1:') !!}
-    <p>{!! $commandeClient->art1 !!}</p>
-</div>
+    <?php if(!$commandeClient->art7 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art7)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte7 !!}</td>
+    </tr>
+<?php }
+if(!$commandeClient->art8 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art8)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte8 !!}</td>
+    </tr>
+<?php } 
+if(!$commandeClient->art9 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art9)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte9 !!}</td>
+    </tr>
+<?php } 
+if(!$commandeClient->art10 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art10)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte10 !!}</td>
+    </tr>
+<?php }
+if(!$commandeClient->art11 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art11)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte11 !!}</td>
+    </tr>
+<?php } 
+if(!$commandeClient->art12 == null) 
+   { ?>
+    <tr>
+        <td> {!! App\Models\Article::findOrFail($commandeClient->art12)->ref_interne !!}</td>
+        <td> {!! $commandeClient->qte12 !!}</td>
+    </tr>
+<?php } 
 
-<!-- Qte1 Field -->
-<div class="form-group">
-    {!! Form::label('qte1', 'Qte1:') !!}
-    <p>{!! $commandeClient->qte1 !!}</p>
-</div>
+if($commandeClient->art1 =! "" || $commandeClient->art2 =! "" || $commandeClient->art3 =! "" || $commandeClient->art4 =! "" || $commandeClient->art5 =! "" || $commandeClient->art6 =! "" || $commandeClient->art7 =! "" || $commandeClient->art8 =! "" || $commandeClient->art9 =! "" ||$commandeClient->art10 =! "" || $commandeClient->art11 =! "" || $commandeClient->art12 =! "") 
+   { ?>
+    </table>
+<?php } ?>
 
-<!-- Art2 Field -->
-<div class="form-group">
-    {!! Form::label('art2', 'Art2:') !!}
-    <p>{!! $commandeClient->art2 !!}</p>
-</div>
-
-<!-- Qte2 Field -->
-<div class="form-group">
-    {!! Form::label('qte2', 'Qte2:') !!}
-    <p>{!! $commandeClient->qte2 !!}</p>
-</div>
-
-<!-- Art3 Field -->
-<div class="form-group">
-    {!! Form::label('art3', 'Art3:') !!}
-    <p>{!! $commandeClient->art3 !!}</p>
-</div>
-
-<!-- Qte3 Field -->
-<div class="form-group">
-    {!! Form::label('qte3', 'Qte3:') !!}
-    <p>{!! $commandeClient->qte3 !!}</p>
-</div>
-
-<!-- Art4 Field -->
-<div class="form-group">
-    {!! Form::label('art4', 'Art4:') !!}
-    <p>{!! $commandeClient->art4 !!}</p>
-</div>
-
-<!-- Qte4 Field -->
-<div class="form-group">
-    {!! Form::label('qte4', 'Qte4:') !!}
-    <p>{!! $commandeClient->qte4 !!}</p>
-</div>
-
-<!-- Art5 Field -->
-<div class="form-group">
-    {!! Form::label('art5', 'Art5:') !!}
-    <p>{!! $commandeClient->art5 !!}</p>
-</div>
-
-<!-- Qte5 Field -->
-<div class="form-group">
-    {!! Form::label('qte5', 'Qte5:') !!}
-    <p>{!! $commandeClient->qte5 !!}</p>
-</div>
-
-<!-- Art6 Field -->
-<div class="form-group">
-    {!! Form::label('art6', 'Art6:') !!}
-    <p>{!! $commandeClient->art6 !!}</p>
-</div>
-
-<!-- Qte6 Field -->
-<div class="form-group">
-    {!! Form::label('qte6', 'Qte6:') !!}
-    <p>{!! $commandeClient->qte6 !!}</p>
-</div>
-
-<!-- Art7 Field -->
-<div class="form-group">
-    {!! Form::label('art7', 'Art7:') !!}
-    <p>{!! $commandeClient->art7 !!}</p>
-</div>
-
-<!-- Qte7 Field -->
-<div class="form-group">
-    {!! Form::label('qte7', 'Qte7:') !!}
-    <p>{!! $commandeClient->qte7 !!}</p>
-</div>
-
-<!-- Art8 Field -->
-<div class="form-group">
-    {!! Form::label('art8', 'Art8:') !!}
-    <p>{!! $commandeClient->art8 !!}</p>
-</div>
-
-<!-- Qte8 Field -->
-<div class="form-group">
-    {!! Form::label('qte8', 'Qte8:') !!}
-    <p>{!! $commandeClient->qte8 !!}</p>
-</div>
-
-<!-- Art9 Field -->
-<div class="form-group">
-    {!! Form::label('art9', 'Art9:') !!}
-    <p>{!! $commandeClient->art9 !!}</p>
-</div>
-
-<!-- Qte9 Field -->
-<div class="form-group">
-    {!! Form::label('qte9', 'Qte9:') !!}
-    <p>{!! $commandeClient->qte9 !!}</p>
-</div>
-
-<!-- Art10 Field -->
-<div class="form-group">
-    {!! Form::label('art10', 'Art10:') !!}
-    <p>{!! $commandeClient->art10 !!}</p>
-</div>
-
-<!-- Qte10 Field -->
-<div class="form-group">
-    {!! Form::label('qte10', 'Qte10:') !!}
-    <p>{!! $commandeClient->qte10 !!}</p>
-</div>
-
-<!-- Art11 Field -->
-<div class="form-group">
-    {!! Form::label('art11', 'Art11:') !!}
-    <p>{!! $commandeClient->art11 !!}</p>
-</div>
-
-<!-- Qte11 Field -->
-<div class="form-group">
-    {!! Form::label('qte11', 'Qte11:') !!}
-    <p>{!! $commandeClient->qte11 !!}</p>
-</div>
-
-<!-- Art12 Field -->
-<div class="form-group">
-    {!! Form::label('art12', 'Art12:') !!}
-    <p>{!! $commandeClient->art12 !!}</p>
-</div>
-
-<!-- Qte12 Field -->
-<div class="form-group">
-    {!! Form::label('qte12', 'Qte12:') !!}
-    <p>{!! $commandeClient->qte12 !!}</p>
-</div>
 
 <!-- Ptht Cmd Cli Field -->
 <div class="form-group">
-    {!! Form::label('ptht_cmd_cli', 'Ptht Cmd Cli:') !!}
-    <p>{!! $commandeClient->ptht_cmd_cli !!}</p>
+    {!! Form::label('ptht_cmd_cli', 'Ptht Cmd Cli:') !!} {!! $commandeClient->ptht_cmd_cli !!}
 </div>
 
 <!-- Taxe Cmd Cli Field -->
 <div class="form-group">
-    {!! Form::label('taxe_cmd_cli', 'Taxe Cmd Cli:') !!}
-    <p>{!! $commandeClient->taxe_cmd_cli !!}</p>
+    {!! Form::label('taxe_cmd_cli', 'Taxe Cmd Cli:') !!} {!! $commandeClient->taxe_cmd_cli !!}
 </div>
 
 <!-- Ptttc Cmd Cli Field -->
 <div class="form-group">
-    {!! Form::label('ptttc_cmd_cli', 'Ptttc Cmd Cli:') !!}
-    <p>{!! $commandeClient->ptttc_cmd_cli !!}</p>
+    {!! Form::label('ptttc_cmd_cli', 'Ptttc Cmd Cli:') !!} {!! $commandeClient->ptttc_cmd_cli !!}
 </div>
 
