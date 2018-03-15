@@ -13,7 +13,8 @@
 <!-- Etat Cmd Cli Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('etat_cmd_cli', 'Etat Cmd Cli:') !!}
-    {!! Form::number('etat_cmd_cli', null, ['class' => 'form-control']) !!}
+    {!! Form::select('etat_cmd_cli', array('1' => 'Devis', '2' => 'Commande')) !!}
+
 </div>
 
 <!-- Date Liv Cmd Cli Field -->

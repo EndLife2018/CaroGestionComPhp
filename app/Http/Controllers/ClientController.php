@@ -60,7 +60,7 @@ class ClientController extends AppBaseController
         $input = $request->all();
         $client = $this->clientRepository->create($input);
 
-        Amqp::publish('store-client', 'message' , ['queue' => 'store-client']);
+        //Amqp::publish('store-client', 'message' , ['queue' => 'store-client']);
 
         Flash::success('Client mis à jour.');
 

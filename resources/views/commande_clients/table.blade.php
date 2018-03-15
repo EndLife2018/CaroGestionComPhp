@@ -34,7 +34,7 @@
             <td>{!! $commandeClient->ptttc_cmd_cli !!}</td>
             <td><?php if($commandeClient->etat_cmd_cli == 1)
                       { ?> 
-                        <a href="" class='btn btn-default btn-xs'>
+                        <a href="{{route('devis.pdf',$commandeClient->id)}}" class='btn btn-default btn-xs'>
                             Devis
                         </a>
                      <?php } ?>

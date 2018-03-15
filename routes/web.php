@@ -15,43 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::resource('clients', 'ClientController');
-
-Route::resource('clients', 'ClientController');
-
-Route::resource('clients', 'ClientController');
-
-Route::resource('clients', 'ClientController');
-
-Route::resource('clients', 'ClientController');
-
-Route::resource('articles', 'ArticleController');
-
-Route::resource('articles', 'ArticleController');
-
-Route::resource('commandeClients', 'CommandeClientController');
-
-Route::resource('commandeFournisseurs', 'CommandeFournisseurController');
 Auth::routes();
+
+Route::resource('clients', 'ClientController');
+Route::resource('articles', 'ArticleController');
+Route::resource('commandeClients', 'CommandeClientController');
+Route::resource('commandeFournisseurs', 'CommandeFournisseurController');
+Route::resource('fournisseurs', 'FournisseurController');
 
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/pdf/{order}', ['as' => 'order.pdf', 'uses' => 'CommandeClientController@devisPdf']);
 
 
-Auth::routes();
+Route::get('/pdf/{order}', ['as' => 'devis.pdf', 'uses' => 'CommandeClientController@devisPdf']);
 
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Route::resource('clients', 'ClientController');
-
-Route::resource('articles', 'ArticleController');
-
-Route::resource('commandeClients', 'CommandeClientController');
-
-Route::resource('commandeFournisseurs', 'CommandeFournisseurController');
-
-Route::resource('fournisseurs', 'FournisseurController');

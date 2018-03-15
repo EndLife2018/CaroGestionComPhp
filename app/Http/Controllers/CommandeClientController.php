@@ -7,9 +7,13 @@ use App\Http\Requests\UpdateCommandeClientRequest;
 use App\Repositories\CommandeClientRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\Models\CommandeClient;
+use App\Models\Client;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use PDF;
+
 
 class CommandeClientController extends AppBaseController
 {
@@ -152,4 +156,20 @@ class CommandeClientController extends AppBaseController
 
         return redirect(route('commandeClients.index'));
     }
+
+
+    public function devisPdf($id)
+    {
+        $order = $this->commandeClientRepository->findWithoutFail($id);
+        //Calculer SUM de quantité et SUM montant
+        $client = Client::findOrFail($order->idclient);
+        $pdf = PDF::loadView('devis', compact('order', 'client'));
+        $name = "DevisNo-".$order->id.".pdf";
+
+        return $pdf->download($name);
+
+    }
+
+
+
 }
