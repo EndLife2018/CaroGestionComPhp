@@ -11,8 +11,12 @@
 				<br>
 				<br>
 				<br>
-				<h1 style="text-align: center;">Gestion Commerciale</h1>
-				<h2 style="text-align: center;">EndLife</h2>
+				<h1 style="text-align: center;">Gestion Commerciale</h1>            
+      
+            <img src="{{URL::asset('LogoEndLife.png')}}" style="width: 20%;display: block;
+    margin-left: auto;
+    margin-right: auto">
+           
 				<br>
 				<br>
 				<br>

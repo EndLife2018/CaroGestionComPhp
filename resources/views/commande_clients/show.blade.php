@@ -11,7 +11,7 @@
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
                     @include('commande_clients.show_fields')
-                    <a href="{!! route('commandeClients.index') !!}" class="btn btn-default">Back</a>
+                    <a href="{!! route('commandeClients.index') !!}" class="btn btn-default">Retour</a>
                 </div>
             </div>
         </div>

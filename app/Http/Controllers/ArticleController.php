@@ -89,7 +89,8 @@ class ArticleController extends AppBaseController
         //dd($article);
         $message = new Message(json_encode($article), ['content_type' => 'application/json', 'delivery_mode' => 2]);
 
-        //Amqp::publish('store-article', $message , ['queue' => 'store-article']);
+        Amqp::publish('store-article', $message , ['queue' => 'store-article']);
+
         $article = $this->articleRepository->create($input);
         Flash::success('Article enregistré.');
         return redirect(route('articles.index'));

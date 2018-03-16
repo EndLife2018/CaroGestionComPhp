@@ -37,6 +37,16 @@ class CommandeClientController extends AppBaseController
         $this->commandeClientRepository->pushCriteria(new RequestCriteria($request));
         $commandeClients = $this->commandeClientRepository->all();
 
+//         $cfg = [
+//                     'src' => 'App\CommandeClient',
+//                     'columns' => [
+//                     'id',
+//                     'date',
+//                     'etat_cmd_cli'
+//                     ]
+// ];
+// echo Grids::make($cfg);
+
         return view('commande_clients.index')
             ->with('commandeClients', $commandeClients);
     }
@@ -63,7 +73,7 @@ class CommandeClientController extends AppBaseController
         $input = $request->all();
         $commandeClient = $this->commandeClientRepository->create($input);
 
-        Flash::success('Commande Client saved successfully.');
+        //Flash::success('Une Commande Client saved successfully.');
 
         return redirect(route('commandeClients.index'));
     }
@@ -128,7 +138,7 @@ class CommandeClientController extends AppBaseController
 
         $commandeClient = $this->commandeClientRepository->update($request->all(), $id);
 
-        Flash::success('Commande Client updated successfully.');
+        //Flash::success('Commande Client updated successfully.');
 
         return redirect(route('commandeClients.index'));
     }
@@ -152,7 +162,7 @@ class CommandeClientController extends AppBaseController
 
         $this->commandeClientRepository->delete($id);
 
-        Flash::success('Commande Client deleted successfully.');
+        //Flash::success('Commande Client deleted successfully.');
 
         return redirect(route('commandeClients.index'));
     }
@@ -165,6 +175,18 @@ class CommandeClientController extends AppBaseController
         $client = Client::findOrFail($order->idclient);
         $pdf = PDF::loadView('devis', compact('order', 'client'));
         $name = "DevisNo-".$order->id.".pdf";
+
+        return $pdf->download($name);
+
+    }
+
+    public function commandePdf($id)
+    {
+        $order = $this->commandeClientRepository->findWithoutFail($id);
+        //Calculer SUM de quantité et SUM montant
+        $client = Client::findOrFail($order->idclient);
+        $pdf = PDF::loadView('order', compact('order', 'client'));
+        $name = "CommandeNo-".$order->id.".pdf";
 
         return $pdf->download($name);
 

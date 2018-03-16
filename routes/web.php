@@ -27,5 +27,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/pdf/{order}', ['as' => 'order.pdf', 'uses' => 'CommandeClientController@devisPdf']);
 
 
-Route::get('/pdf/{order}', ['as' => 'devis.pdf', 'uses' => 'CommandeClientController@devisPdf']);
+Route::get('/pdf/{devis}', ['as' => 'devis.pdf', 'uses' => 'CommandeClientController@devisPdf']);
+Route::get('/pdfC/{commande}', ['as' => 'commande.pdfC', 'uses' => 'CommandeClientController@commandePdf']);
 

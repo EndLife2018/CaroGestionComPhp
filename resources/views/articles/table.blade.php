@@ -2,6 +2,7 @@
     <thead>
         <tr>
         <th>Id four</th>
+        <th>Description</th>
         <th>Ref Interne</th>
         <th>Poids</th>
         <th>Stock Minima</th>
@@ -15,6 +16,7 @@
     @foreach($articles as $article)
         <tr>
             <td>{!! $article->idfournisseur !!}</td>
+            <td>{!! $article->desc_long !!}</td>
             <td>{!! $article->ref_interne !!}</td>
             <td>{!! $article->poids !!}</td>
             <td>{!! $article->stock_minima !!}</td>

@@ -15,7 +15,18 @@
 
 <!-- Etat Cmd Cli Field -->
 <div class="form-group">
-    {!! Form::label('etat_cmd_cli', 'Etat commande : ') !!} {!! $commandeClient->etat_cmd_cli !!}
+    {!! Form::label('etat_cmd_cli', 'Etat commande : ') !!}
+    <?php 
+    if($commandeClient->etat_cmd_cli == 1)
+    {
+        echo "Devis";
+    }
+    elseif($commandeClient->etat_cmd_cli == 2)
+    {
+        echo "Commande";
+    }
+
+        ?>
 </div>
 
 <!-- Date Liv Cmd Cli Field -->

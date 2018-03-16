@@ -22,7 +22,7 @@
         </div>
 
     <div>
-         <h2>Facture - N° 00000{{$order->id}}</h2><br>
+         <h2>Devis - N° 00000{{$order->id}}</h2><br>
         <br>
     </div>
 

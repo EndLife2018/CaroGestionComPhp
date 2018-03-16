@@ -185,6 +185,9 @@ return [
         \InfyOm\CoreTemplates\CoreTemplatesServiceProvider::class,
         Creativeorange\Gravatar\GravatarServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Nayjest\Grids\ServiceProvider::class,
+
+
 
     ],
 
@@ -240,7 +243,9 @@ return [
         'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
         'Amqp' => Bschmitt\Amqp\Facades\Amqp::class,
         'PDF'   => Barryvdh\DomPDF\Facade::class,
-
+        'Form'  => Illuminate\Html\FormFacade::class,
+        'HTML'  => Collective\Html\HtmlFacade::class,
+        'Grids' => Nayjest\Grids\Grids::class,
     ],
 
 ];
